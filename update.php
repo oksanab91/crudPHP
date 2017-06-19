@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-
+/*test test */
 include 'db.php';
 
 $id = $_GET['id'];
