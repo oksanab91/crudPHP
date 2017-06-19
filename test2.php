@@ -4,5 +4,8 @@
  * User: Oks
  * Date: 6/18/2017
  * Time: 9:33 PM
- * new test
- */
+  */
+/*add new function*/
+function demo(){
+
+}
