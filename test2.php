@@ -7,5 +7,6 @@
   */
 /*add new function*/
 function demo(){
-
+    echo "ku ku";
+    echo "okok";
 }
