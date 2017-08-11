@@ -31,13 +31,18 @@ $rows = $db->query($sql);
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+
+    <script src="add.js"></script>
+
+
     <title>Crud App</title>
 </head>
-<body>
+<body ng-app="myModule">
 
     <div class="container">
         <div class="row" style="margin-top: 70px;">
-            <center><h1>Toto List</h1></center>            
+            <h1>Toto List</h1>
 
             <div class="col-md-10 col-md-offset-1">
                 <table class="table table-hover" >
@@ -55,14 +60,26 @@ $rows = $db->query($sql);
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Add Task</h4>
       </div>
-      <div class="modal-body">
-        <form method="post" action="add.php">
+      <div class="modal-body" ng-controller="MyController">
+        <!--<form method="post" action="add.php">
             <div class="form-group">
                 <label>Task Name</label>
                 <input type="text" required name="task" class="form-control">
             </div>
             <input type="submit" name="send" value="Add Task" class="btn btn-success">
+        </form>-->
+
+        <form name="myForm">
+            <div class="form-group">
+                <label>Task Angular Name</label>
+                <input type="text" required name="ang" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success" ng-click = "doSave()">Add Angular</button>               
+            </div>            
         </form>
+
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
