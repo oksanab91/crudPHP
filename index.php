@@ -9,8 +9,9 @@ $page = (isset($_GET['page']) ? (int)$_GET['page'] : 1);
 $perPage = (isset($_GET['perPage']) && (int)$_GET['perPage'] <= 50 ? (int)$_GET['perPage'] : 5);
 $start = $page > 1 ? ($page - 1) * $perPage : 0;
 
-$sql = "SELECT * FROM tasts LIMIT " .$start. " , " .$perPage. "";
-echo $sql;
+$sql = "SELECT * FROM tasts LIMIT " .$start. " , " .$perPage;
+//echo $sql;
+var_dump($sql);
 $total = $db->query("SELECT * FROM tasts")->num_rows;
 $pages = ceil($total/$perPage);
 
